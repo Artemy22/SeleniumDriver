@@ -12,7 +12,6 @@ public class WebDriverExample {
         WebDriver driver = new ChromeDriver();
         driver.navigate().to("http://automationpractice.com/index.php");
         driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
-        //driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"email_create\"]")).sendKeys("qaqasqa1231@qa.qa");
         driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
@@ -34,7 +33,6 @@ public class WebDriverExample {
             driver.close();
             System.out.println("Test passed");
         } else {
-
             System.out.println(actualMsg);
         }
     }
